@@ -9,7 +9,13 @@
   home.packages = [
     
   ];
-
+  
+  # Themeing
+  gtk.enable = true;
+  gtk.cursorTheme.package = pkgs.bibata-cursors;
+  gtk.cursorTheme.name = "Bibata-Modern-Classic";
+  
+  # Config files (To remove once configs are migrated)
   home.file = {
   # Git
   ".gitconfig".source = ./config/gitconfig;
