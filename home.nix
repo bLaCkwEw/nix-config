@@ -4,9 +4,29 @@
   home.username = "blackwew";
   home.homeDirectory = "/home/blackwew";
   
+  
+  nixpkgs.config.allowUnfree = true;
+  
+  
   # Installed packages for local user
-  home.packages = [
-    
+  home.packages = with pkgs; [
+    #vscode
+    #obsidian
+    #spotify
+    #discord
+    mpv
+    stremio
+    transmission_4-gtk
+    scrcpy
+    deno
+    nodejs_20
+    nodePackages_latest.pnpm
+    ventoy-full
+    croc
+    zoxide
+    fzf
+    bitwarden
+    tmux
   ];
   
   
@@ -40,6 +60,8 @@
   		};
   		
   		scrolling.history = 2000;
+  		
+  		mouse.hide_when_typing = false;
   		
   		font = {
   			size = 11;
@@ -212,7 +234,11 @@
   
   # Environment variables for local user
   home.sessionVariables = {
-    
+    EDITOR = "nvim";
+    VISUAL = "nvim";
+    BROWSER = "firefox";
+    TERMINAL = "alacritty";
+    TERM = "alacritty";
   };
   
   

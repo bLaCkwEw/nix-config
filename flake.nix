@@ -1,7 +1,8 @@
 {
   description = "Home Manager configuration of blackwew";
 
-  inputs = {
+
+	inputs = {
     # Specify the source of Home Manager and Nixpkgs.
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     home-manager = {
@@ -10,11 +11,12 @@
     };
   };
 
-  outputs = { nixpkgs, home-manager, ... }:
-    let
+
+	outputs = { nixpkgs, home-manager, ... }:
+		let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
-    in {
+		in {
       homeConfigurations."blackwew" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
 
@@ -25,5 +27,5 @@
         # Optionally use extraSpecialArgs
         # to pass through arguments to home.nix
       };
-    };
+		};
 }
