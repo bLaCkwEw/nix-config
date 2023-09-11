@@ -121,7 +121,7 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.blackwew = {
     isNormalUser = true;
-    description = "User account for blackwew";
+    description = "blackwew";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [];
     shell = pkgs.fish;
