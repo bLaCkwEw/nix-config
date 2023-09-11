@@ -18,7 +18,6 @@
     stremio
     transmission_4-gtk
     scrcpy
-    deno
     nodejs_20
     nodePackages_latest.pnpm
     ventoy-full
