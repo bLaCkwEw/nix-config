@@ -103,6 +103,7 @@
   
   # Enable fish shell
   programs.fish.enable = true;
+  users.defaultUserShell = pkgs.fish;
   
   
   # Enable flatpacks
