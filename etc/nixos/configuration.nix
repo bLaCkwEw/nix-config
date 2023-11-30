@@ -177,7 +177,7 @@
   
   
   # System version
-  system.stateVersion = "23.11";
+  system.stateVersion = "23.05";
   
   
   # Automatic system updates
