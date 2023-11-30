@@ -132,6 +132,10 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
   
+  # Idk what depends on this. Maybe discord?
+  nixpkgs.config.permittedInsecurePackages = [
+  	"electron-24.8.6"
+  ];
   
   # Installed packages:
   environment.systemPackages = with pkgs; [
@@ -173,18 +177,18 @@
   
   
   # System version
-  system.stateVersion = "23.05";
+  system.stateVersion = "23.11";
   
   
   # Automatic system updates
-  system.autoUpgrade.enable = true;
+  system.autoUpgrade.enable = false;
   
   
   # Automatic Garbage Collection
   nix.gc = {
     automatic = true;
     dates = "weekly";
-    options = "--delete-older-than 7d";
+    options = "--delete-older-than 60d";
   };
 
 }
