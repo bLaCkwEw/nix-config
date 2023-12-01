@@ -26,6 +26,7 @@
     fzf
     bitwarden
     tmux
+    restic
   ];
   
   
