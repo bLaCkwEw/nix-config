@@ -146,12 +146,6 @@
       htop
       git
       nerdfonts
-      #
-      vscode
-      obsidian
-      spotify
-      discord
-      #
   ];
   
   

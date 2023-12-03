@@ -10,13 +10,15 @@
   
   # Installed packages for local user
   home.packages = with pkgs; [
-    #vscode
-    #obsidian
-    #spotify
-    #discord
+  	#
+    vscode
+    obsidian
+    spotify
+    discord
+    #
     mpv
     stremio
-    transmission_4-gtk
+    transmission-gtk
     scrcpy
     nodejs_20
     nodePackages_latest.pnpm
