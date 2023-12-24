@@ -5,6 +5,7 @@
     [
       ./hardware-configuration.nix
       ./vm.nix
+      ./other.nix
     ];
   
   

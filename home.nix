@@ -12,7 +12,7 @@
   home.packages = with pkgs; [
   	#
     vscode
-    obsidian
+    #obsidian
     spotify
     discord
     #
