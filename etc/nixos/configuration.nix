@@ -28,6 +28,15 @@
   	configurationLimit = 30;
   };
   
+  # Enable BBR congestion control
+  boot = {
+  	kernelModules = [ "tcp_bbr" ];
+  	kernel.sysctl = {
+  		"net.ipv4.tcp_congestion_control" = "bbr";
+  		"net.core.default_qdisc" = "fq";
+  		};
+  	};
+  
   
   # Network
   networking.networkmanager.enable = true;
