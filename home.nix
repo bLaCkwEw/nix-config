@@ -29,6 +29,7 @@
     bitwarden
     tmux
     restic
+    bleachbit
 ];
   
   
