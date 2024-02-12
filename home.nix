@@ -27,7 +27,6 @@
     zoxide
     fzf
     bitwarden
-    tmux
     restic
     bleachbit
 ];
@@ -205,12 +204,28 @@
   	};
   };
   
+  # Bat
+  programs.bat.enable = true;
+  
+  # Zellij
+  programs.zellij = {
+  	enable = true;
+  	enableFishIntegration= true;
+  };
+  
+  # Eza
+  programs.eza = {
+  	enable = true;
+  	icons = true;
+  	enableAliases = true;
+  };
+  
+  
   # Config files (To remove once configs are migrated)
   home.file = {
   # Neofetch
   ".config/neofetch/config.conf".source = ./config/neofetch/config.conf;
-  # Tmux
-  ".tmux.conf".source = ./config/tmux.conf;
+  
   # Fish
   ".config/fish" = {
     source = ./config/fish;

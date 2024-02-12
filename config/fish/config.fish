@@ -19,6 +19,7 @@ alias e="exit"
 alias q="exit"
 alias h="history --max=10"
 alias rm="rm -drvI"
+alias cat="bat"
 
 # Git
 alias gs="git status"
