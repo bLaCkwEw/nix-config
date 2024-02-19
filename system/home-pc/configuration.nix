@@ -4,18 +4,11 @@
   imports =
     [
       ./hardware-configuration.nix
-      ./vm.nix
-      ./other.nix
+      
+      ./modules/vm.nix
+      
+      ./modules/remove-gnome-bloat.nix
     ];
-  
-  
-  # Change default config directory
-  # https://nixos.wiki/wiki/NixOS_configuration_editors
-  #
-  # mkdir ~/etc
-	# sudo mv /etc/nixos ~/etc/
-	# sudo chown -R $(id -un):users ~/etc/nixos
-	# sudo ln -s ~/etc/nixos /etc/
   
   
   # Bootloader
@@ -27,6 +20,7 @@
   	useOSProber = true;
   	configurationLimit = 30;
   };
+  
   
   # Enable BBR congestion control
   boot = {
@@ -51,11 +45,11 @@
   	};
   
   
-  # Set your time zone.
+  # Set time zone
   time.timeZone = "Europe/Bucharest";
   
   
-  # Select internationalisation properties.
+  # Select internationalisation properties
   i18n.defaultLocale = "en_US.UTF-8";
   
   i18n.extraLocaleSettings = {
@@ -71,11 +65,11 @@
   };
   
   
-  # Enable the X11 windowing system.
+  # Enable the X11
   services.xserver.enable = true;
   
   
-  # Enable the GNOME Desktop Environment.
+  # Enable the GNOME Desktop Environment
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
   
@@ -87,11 +81,11 @@
   };
   
   
-  # Enable CUPS to print documents.
+  # CUPS for printing documents
   services.printing.enable = false;
   
   
-  # Enable sound with pipewire.
+  # Enable sound with pipewire
   sound.enable = true;
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
@@ -128,8 +122,10 @@
   	vimAlias = true;
   };
   
+  # Enable tailscale
+  # services.tailscale.enable = true;
   
-  # Define a user account. Don't forget to set a password with ‘passwd’.
+  # Define a user account !! Don't forget to set a password with "passwd"!!
   users.users.blackwew = {
     isNormalUser = true;
     description = "blackwew";
@@ -142,14 +138,13 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
   
-  # Idk what depends on this. Maybe discord?
-  nixpkgs.config.permittedInsecurePackages = [
-  	"electron-24.8.6"
-  ];
+  # Obsidian depends on this (but I use the flatpack now)
+  # nixpkgs.config.permittedInsecurePackages = [
+  # 	"electron-24.8.6"
+  # ];
   
   # Installed packages:
   environment.systemPackages = with pkgs; [
-      home-manager
       firefox
       alacritty
       neofetch
@@ -157,21 +152,6 @@
       git
       nerdfonts
   ];
-  
-  
-  # Remove gnome packages
-  environment.gnome.excludePackages = (with pkgs; [
-  gnome-tour
-  ]) ++ (with pkgs.gnome; [
-  gnome-music # music player
-  geary # mail client
-  epiphany # web browser
-  totem # video player
-  ]);
-  
-  
-  # Disable xterm
-  services.xserver.excludePackages = [ pkgs.xterm ];
   
   
   # Environment variables
