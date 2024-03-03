@@ -10,7 +10,14 @@
   	
   	extraConfig = {
 	  	init.defaultBranch = "master";
-	  	credential.helper = "store";  		
+	  	credential.helper = "store";
+	  	push.autoSetupRemote = true;
+	  	commit.verbose = true;
+	  	help.autocorrect = "prompt";
+	  	diff.algorithm = "histogram";
+	  	merge.conflictstyle = "zdiff3";
+	  	branch.sort = "-committerdate";
+	  	# merge.tool = "meld";
   	};
   };
 }
