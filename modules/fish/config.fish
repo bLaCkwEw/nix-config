@@ -11,7 +11,7 @@ set -gx PATH "$PNPM_HOME" $PATH
 alias pnpr="pnpm run"
 
 # Zoxide
-zoxide init fish | source
+zoxide init --cmd cd fish | source
 
 # Various aliases
 alias c="clear"
