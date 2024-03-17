@@ -29,10 +29,3 @@ alias gaa="git add ."
 alias gpu="git pull"
 alias gps="git push"
 
-# Eza
-alias ls="eza --icons --classify"
-alias ll="eza -l --icons --classify"
-alias la="eza -a --icons --classify"
-alias lt="eza --tree --icons --classify"
-alias lla="eza -la --icons --classify"
-
