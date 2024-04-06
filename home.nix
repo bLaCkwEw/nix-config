@@ -3,11 +3,13 @@
 {
 	imports = [
 		./modules/alacritty.nix
+		./modules/fish.nix
 		./modules/git.nix
 		./modules/mpv.nix
 		./modules/bat.nix
 		./modules/eza.nix
 		./modules/zellij.nix
+		./modules/zoxide.nix
 	];
 	
 	
@@ -41,7 +43,6 @@
     nodePackages_latest.pnpm
     ventoy-full
     croc
-    zoxide
     fzf
     bitwarden
     restic
@@ -80,6 +81,9 @@
     BROWSER = "firefox";
     TERMINAL = "alacritty";
     TERM = "alacritty";
+    
+    # pnpm
+    PNPM_HOME = "/home/blackwew/media/.pnpm-store/";
   };
 }
 

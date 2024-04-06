@@ -5,6 +5,11 @@
   programs.eza = {
   	enable = true;
   	icons = true;
-	extraOptions = [ "--classify" ];
+		extraOptions = [ 
+			"--classify" 
+			"--group-directories-first"
+		];
+		enableFishIntegration = true;
   };
 }
+
