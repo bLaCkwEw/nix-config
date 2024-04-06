@@ -18,7 +18,7 @@
   home.homeDirectory = "/home/blackwew";
   
   # Home manager version
-  home.stateVersion = "22.11";
+  home.stateVersion = "23.11";
   
   # Turn on home manager
   programs.home-manager.enable = true;
@@ -45,7 +45,6 @@
     croc
     fzf
     bitwarden
-    restic
     bleachbit
 ];
   
