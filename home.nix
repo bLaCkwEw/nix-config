@@ -10,6 +10,7 @@
 		./modules/eza.nix
 		./modules/zellij.nix
 		./modules/zoxide.nix
+		./modules/syncthing.nix
 	];
 	
 	
