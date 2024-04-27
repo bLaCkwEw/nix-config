@@ -47,6 +47,7 @@
     fzf
     bitwarden
     bleachbit
+    ollama
 ];
   
   
