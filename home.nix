@@ -64,8 +64,8 @@
   
   # Config files (To remove once configs are migrated)
   home.file = {
-  # Neofetch
-  ".config/neofetch/config.conf".source = ./modules/neofetch/config.conf;
+  # Fastfetch
+  ".config/fastfetch/config.jsonc".source = ./modules/fastfetch/config.jsonc;
   
   # Fish
   ".config/fish" = {

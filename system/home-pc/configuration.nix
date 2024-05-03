@@ -147,7 +147,7 @@
   environment.systemPackages = with pkgs; [
       firefox
       alacritty
-      neofetch
+      fastfetch
       htop
       git
       nerdfonts
