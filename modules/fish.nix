@@ -17,6 +17,7 @@
     		# Git
     		gs = "git status";
     		gc = "git commit -v";
+		gcd = "git commit -v -m $(date +'%Y-%m-%d %H:%M')";
     		ga = "git add";
     		gaa = "git add .";
     		gpu = "git pull";
