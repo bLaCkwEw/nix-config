@@ -1,17 +1,17 @@
-## Home Manager Config
+## NixOS and Home Manager Config
 
-Personal home manager config.
+Personal NixOS and Home Manager config.
 
 ## Get started
 
 Clone the repository into `~/.config/home-manager/`.
 
-To make changes at the user level, run:
+To make user changes, run:
 ```bash
 home-manager switch
 ```
 
-To make changes at the system level, run:
+To make system changes, run:
 ```bash
 sudo nixos-rebuild switch --flake /path/to/flake/
 ```
