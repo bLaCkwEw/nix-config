@@ -11,6 +11,7 @@
 		./modules/zellij.nix
 		./modules/zoxide.nix
 		./modules/syncthing.nix
+		./modules/fastfetch.nix
 	];
 	
 	
@@ -19,7 +20,7 @@
   home.homeDirectory = "/home/blackwew";
   
   # Home manager version
-  home.stateVersion = "23.11";
+  home.stateVersion = "24.05";
   
   # Turn on home manager
   programs.home-manager.enable = true;
@@ -59,14 +60,8 @@
   };
   
   
-  # Package configs -- to move to individual files
-  
-  
   # Config files (To remove once configs are migrated)
   home.file = {
-  # Fastfetch
-  ".config/fastfetch/config.jsonc".source = ./modules/fastfetch/config.jsonc;
-  
   # Fish
   ".config/fish" = {
     source = ./modules/fish;
