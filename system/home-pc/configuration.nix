@@ -138,11 +138,6 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
   
-  # Obsidian depends on this (but I use the flatpack now)
-  # nixpkgs.config.permittedInsecurePackages = [
-  # 	"electron-24.8.6"
-  # ];
-  
   # Installed packages:
   environment.systemPackages = with pkgs; [
       firefox
