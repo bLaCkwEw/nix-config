@@ -39,7 +39,7 @@
     # Free
     mpv
     stremio
-    transmission-gtk
+    transmission_4-gtk
     scrcpy
     nodejs_20
     nodePackages_latest.pnpm
