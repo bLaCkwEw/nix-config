@@ -27,10 +27,13 @@
   	'';
   	
   	plugins = with pkgs.vimPlugins; [
-			which-key-nvim
 			telescope-fzf-native-nvim
 			vim-nix
 			
+			{
+				plugin = which-key-nvim;
+				config = toLuaFile ./plugins/which-key.lua;
+			}
 			{
 				plugin = catppuccin-nvim;
 				config = toLuaFile ./plugins/catppuccin.lua;
