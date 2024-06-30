@@ -35,7 +35,6 @@
   	# Unfree
     vscode
     # obsidian
-    spotify
     discord
     # Free
     mpv

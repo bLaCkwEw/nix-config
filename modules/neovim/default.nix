@@ -17,7 +17,6 @@
   	withNodeJs = true;
   	
   	extraPackages = with pkgs; [
-  		lua-language-server
   		wl-clipboard
   	];
   	
@@ -29,6 +28,26 @@
   	plugins = with pkgs.vimPlugins; [
 			telescope-fzf-native-nvim
 			vim-nix
+			
+			# LSP
+			cmp-nvim-lsp
+			cmp-path
+			cmp-buffer
+			cmp_luasnip
+			friendly-snippets
+			lsp-zero-nvim
+			{
+				plugin = nvim-cmp;
+				config = toLuaFile ./plugins/cmp.lua;
+			}
+			{
+				plugin = lazy-lsp-nvim;
+				config = toLuaFile ./plugins/lsp.lua;
+			}
+			{
+				plugin = luasnip;
+				config = toLuaFile ./plugins/luasnip.lua;
+			}
 			
 			{
 				plugin = which-key-nvim;
