@@ -12,7 +12,8 @@
 		./modules/zoxide.nix
 		./modules/syncthing.nix
 		./modules/fastfetch.nix
-		./modules/neovim/default.nix
+    ./modules/neovim/default.nix
+    #./modules/dconf.nix
 	];
 	
 	

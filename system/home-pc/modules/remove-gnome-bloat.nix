@@ -3,12 +3,13 @@
 {
 	# Remove gnome packages
   environment.gnome.excludePackages = (with pkgs; [
-  gnome-tour
+    gnome-tour 
+    geary # mail client
+    epiphany # web browser
+    totem # video player
+
   ]) ++ (with pkgs.gnome; [
   gnome-music # music player
-  geary # mail client
-  epiphany # web browser
-  totem # video player
   ]);
   
   
