@@ -4,7 +4,6 @@ with lib.hm.gvariant;
 {
   # Dconf Settings
   # Sets up GNOME keybinds
-  # Files generated via dconf2nix: https://github.com/gvolpe/dconf2nix
   
   dconf = {
 		settings = {

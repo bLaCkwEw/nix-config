@@ -40,7 +40,7 @@
     # Free
     mpv
     stremio
-    transmission_4-gtk
+    # transmission_4-gtk # broken
     scrcpy
     nodejs_20
     nodePackages_latest.pnpm
