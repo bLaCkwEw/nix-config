@@ -1,0 +1,22 @@
+[/]
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/']
+
+[custom-keybindings/custom0]
+binding='<Super>Return'
+command='alacritty'
+name='Launch Terminal'
+
+[custom-keybindings/custom1]
+binding='<Super>f'
+command='firefox'
+name='Launch Firefox'
+
+[custom-keybindings/custom2]
+binding='<Super>e'
+command='nautilus'
+name='Launch Files'
+
+[custom-keybindings/custom3]
+binding='<Alt><Super>f'
+command='firefox -P Work'
+name='Launch Firefox (Work)'
