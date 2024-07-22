@@ -22,6 +22,10 @@
   };
   
   
+  # Latest Kernel
+  boot.kernelPackages = pkgs.linuxPackages_latest;
+  
+  
   # Enable BBR congestion control
   boot = {
   	kernelModules = [ "tcp_bbr" ];
