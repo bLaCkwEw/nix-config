@@ -16,3 +16,9 @@ dconf load /org/gnome/shell/keybindings/ < kbd-shortcuts.txt
 dconf load /org/gnome/desktop/wm/keybindings/ < kbd-wm.txt
 ```
 
+**kbd-mutter**
+```sh
+dconf load /org/gnome/mutter/keybindings/ < kbd-mutter
+```
+
+
