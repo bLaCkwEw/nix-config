@@ -49,7 +49,7 @@
     fzf
     bitwarden
     bleachbit
-    ollama
+    # ollama # broken
 ];
   
   
