@@ -36,6 +36,7 @@
 			cmp_luasnip
 			friendly-snippets
 			lsp-zero-nvim
+			lsp-format-nvim
 			{
 				plugin = nvim-cmp;
 				config = toLuaFile ./plugins/cmp.lua;

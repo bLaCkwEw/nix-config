@@ -6,7 +6,12 @@ lsp_zero.on_attach(function(client, bufnr)
     buffer = bufnr,
     preserve_mappings = false
   })
+  -- Also load LSP Format
+  require("lsp-format").setup {}
+  require("lsp-format").on_attach(client, bufnr)
 end)
+-- Format on save
+require("lspconfig").gopls.setup { on_attach = on_attach }
 
 require("lazy-lsp").setup {
 	excluded_servers = {
