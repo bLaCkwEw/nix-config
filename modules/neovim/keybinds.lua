@@ -5,7 +5,3 @@ vim.keymap.set('v', '<C-s>', '<Esc>:w<CR>', { noremap = true, silent = true })
 
 -- Terminal
 vim.keymap.set('n', '<leader>t', ':terminal<CR>', { noremap = true, silent = true })
-
--- Quit session
-vim.keymap.set('n', '<leader>qq', ':q!<CR>', { noremap = true, silent = true })
-vim.keymap.set('n', '<leader>qw', ':wq<CR>', { noremap = true, silent = true })
