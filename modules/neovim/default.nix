@@ -22,13 +22,31 @@
   	
   	extraLuaConfig = ''
   		-- Read options file
-  		${builtins.readFile ./options.lua}
+  		${ builtins.readFile ./options.lua }
+  		-- Read the keybinds file
+  		${ builtins.readFile ./keybinds.lua }
   	'';
   	
   	plugins = with pkgs.vimPlugins; [
-			telescope-fzf-native-nvim
-			vim-nix
+			nvim-web-devicons
+
+			{
+				plugin = oil-nvim;
+				config = toLuaFile ./plugins/oil.lua;
+			}
 			
+			{
+				plugin = mini-nvim;
+				config = toLuaFile ./plugins/mini.lua;
+			}
+			
+  		#Telescope
+  		telescope-nvim
+  		{
+				plugin = telescope-fzf-native-nvim;
+  			config = toLuaFile ./plugins/telescope.lua;
+  		}
+
 			# LSP
 			cmp-nvim-lsp
 			cmp-path
@@ -50,10 +68,6 @@
 				config = toLuaFile ./plugins/luasnip.lua;
 			}
 			
-			{
-				plugin = which-key-nvim;
-				config = toLuaFile ./plugins/which-key.lua;
-			}
 			{
 				plugin = catppuccin-nvim;
 				config = toLuaFile ./plugins/catppuccin.lua;

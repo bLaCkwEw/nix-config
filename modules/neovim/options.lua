@@ -1,7 +1,3 @@
--- Set leader to <space>
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
-
 vim.opt.clipboard = 'unnamedplus' -- Sync clipboard with system
 
 vim.opt.number = true -- Line numbers
