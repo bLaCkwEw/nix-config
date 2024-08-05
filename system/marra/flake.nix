@@ -1,7 +1,7 @@
 {
-  description = "Tina - Home PC - System Config";
+  description = "Marra - Work Computer - System Config";
 
-  inputs = { nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable"; };
+  inputs = { nixpkgs.url = "github:nixos/nixpkgs/nixos-24.05"; };
 
   outputs = { self, nixpkgs, ... }:
     let lib = nixpkgs.lib;

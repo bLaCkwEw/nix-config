@@ -4,10 +4,8 @@
   imports =
     [
       ./hardware-configuration.nix
-      
-      ./modules/vm.nix
-      
       ./modules/remove-gnome-bloat.nix
+      
     ];
   
   
@@ -21,9 +19,29 @@
   	configurationLimit = 30;
   };
   
-  
-  # Latest Kernel
-  boot.kernelPackages = pkgs.linuxPackages_latest;
+  # TLP Power Management
+  services.power-profiles-daemon.enable = false;
+  services.tlp = {
+      enable = true;
+      settings = {
+        CPU_SCALING_GOVERNOR_ON_AC = "performance";
+        CPU_SCALING_GOVERNOR_ON_BAT = "powersave";
+
+        CPU_ENERGY_PERF_POLICY_ON_BAT = "power";
+        CPU_ENERGY_PERF_POLICY_ON_AC = "performance";
+
+        CPU_MIN_PERF_ON_AC = 0;
+        CPU_MAX_PERF_ON_AC = 100;
+        CPU_MIN_PERF_ON_BAT = 0;
+        CPU_MAX_PERF_ON_BAT = 40;
+
+       # Optional helps save long term battery health
+       # START_CHARGE_THRESH_BAT0 = 40; # 40 and bellow it starts to charge
+       	STOP_CHARGE_THRESH_BAT0 = 80; # 80 and above it stops charging
+
+      };
+	};
+
   
   
   # Enable BBR congestion control
@@ -38,7 +56,7 @@
   
   # Network
   networking.networkmanager.enable = true;
-  networking.hostName = "tina";
+  networking.hostName = "marra";
   # networking.wireless.enable = true;
   
   
@@ -90,7 +108,7 @@
   
   
   # Enable sound with pipewire
-  # sound.enable = true;
+  sound.enable = true;
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
@@ -126,13 +144,11 @@
   	vimAlias = true;
   };
   
-  # Enable tailscale
-  # services.tailscale.enable = true;
   
   # Define a user account !! Don't forget to set a password with "passwd"!!
-  users.users.blackwew = {
+  users.users.marra = {
     isNormalUser = true;
-    description = "blackwew";
+    description = "Work Computer";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [];
     shell = pkgs.fish;
@@ -142,11 +158,11 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
   
+  
   # Installed packages:
   environment.systemPackages = with pkgs; [
       firefox
       alacritty
-      fastfetch
       htop
       git
       nerdfonts
