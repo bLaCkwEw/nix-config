@@ -18,6 +18,9 @@
   	useOSProber = true;
   	configurationLimit = 30;
   };
+
+  # Latest Kernel
+  boot.kernelPackages = pkgs.linuxPackages_latest;
   
   # TLP Power Management
   services.power-profiles-daemon.enable = false;
