@@ -7,7 +7,7 @@
     let lib = nixpkgs.lib;
     in {
       nixosConfigurations = {
-        nixos = lib.nixosSystem {
+       marra = lib.nixosSystem {
           system = "x86_64-linux";
           modules = [ ./configuration.nix ];
         };
