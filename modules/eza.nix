@@ -4,7 +4,7 @@
   # Eza
   programs.eza = {
   	enable = true;
-  	icons = true;
+  	icons = "auto";
 		extraOptions = [ 
 			"--classify" 
 			"--group-directories-first"
