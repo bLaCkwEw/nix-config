@@ -50,6 +50,7 @@
     bitwarden
     bleachbit
     # ollama # broken
+		protonvpn-gui
 ];
   
   

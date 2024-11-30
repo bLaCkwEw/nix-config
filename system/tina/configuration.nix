@@ -149,7 +149,7 @@
       fastfetch
       htop
       git
-      nerdfonts
+      nerd-fonts.jetbrains-mono
   ];
   
   
