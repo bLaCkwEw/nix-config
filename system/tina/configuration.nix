@@ -142,6 +142,7 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
   
+
   # Installed packages:
   environment.systemPackages = with pkgs; [
       firefox
@@ -149,10 +150,21 @@
       fastfetch
       htop
       git
-      nerd-fonts.jetbrains-mono
   ];
-  
-  
+
+
+	# Fonts
+	fonts = {
+		enableDefaultPackages = true;
+		fontDir.enable = true;
+		fontconfig.useEmbeddedBitmaps = true;
+
+		packages = with pkgs; [
+			nerd-fonts.jetbrains-mono
+		];
+	};
+
+
   # Environment variables
   environment.variables = {
     EDITOR = "nvim";
