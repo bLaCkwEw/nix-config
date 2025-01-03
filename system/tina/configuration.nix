@@ -160,7 +160,8 @@
 		fontconfig.useEmbeddedBitmaps = true;
 
 		packages = with pkgs; [
-			nerd-fonts.jetbrains-mono
+			# nerd-fonts.jetbrains-mono
+			nerdfonts
 		];
 	};
 
