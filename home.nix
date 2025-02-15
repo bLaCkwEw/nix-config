@@ -70,6 +70,10 @@
     recursive = true;
   };
   };
+
+
+	# Add local bin to path
+	home.sessionPath = [ "$HOME/.local/bin" ];
   
   
   # Environment variables for local user
