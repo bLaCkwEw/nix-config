@@ -51,6 +51,7 @@
     bleachbit
     # ollama # broken
 		protonvpn-gui
+		antimicrox
 ];
   
   

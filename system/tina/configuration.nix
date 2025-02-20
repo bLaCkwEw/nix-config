@@ -22,6 +22,9 @@
 	};
 
 
+	# Enable Steam Hardware to make controller work
+	hardware.steam-hardware.enable = true;
+
 	# Latest Kernel
 	boot.kernelPackages = pkgs.linuxPackages_latest;
 
@@ -133,7 +136,7 @@
 	users.users.blackwew = {
 		isNormalUser = true;
 		description = "blackwew";
-		extraGroups = [ "networkmanager" "wheel" "audio" ];
+		extraGroups = [ "networkmanager" "wheel" "audio" "input" ];
 		packages = with pkgs; [];
 		shell = pkgs.fish;
 	};
