@@ -14,6 +14,7 @@
 		./modules/fastfetch.nix
     ./modules/neovim/default.nix
     #./modules/dconf.nix
+		./modules/nh.nix
 	];
 	
 	
