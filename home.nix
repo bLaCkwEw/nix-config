@@ -53,7 +53,8 @@
     # ollama # broken
 		protonvpn-gui
 		antimicrox
-];
+		turso-cli
+	];
   
   
   # Themeing
