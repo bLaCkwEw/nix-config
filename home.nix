@@ -54,6 +54,7 @@
 		protonvpn-gui
 		antimicrox
 		turso-cli
+		lrcget
 	];
   
   
