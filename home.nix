@@ -45,7 +45,7 @@
     scrcpy
     nodejs_20
     nodePackages_latest.pnpm
-    ventoy-full
+		# ventoy-full # contains insecure binary blobs
     croc
     fzf
     bitwarden
@@ -59,7 +59,7 @@
 		picard # song metadata
 	];
   
-  
+
   # Themeing
   gtk.enable = true;
   gtk.cursorTheme = {
