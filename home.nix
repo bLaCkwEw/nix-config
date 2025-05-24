@@ -69,13 +69,13 @@
   
   
   # Config files (To remove once configs are migrated)
-  home.file = {
+	home.file = {
   # Fish
-  ".config/fish" = {
-    source = ./modules/fish;
-    recursive = true;
-  };
-  };
+	".config/fish/conf.d" = {
+	  source = ./modules/fish/conf.d;
+	  recursive = true;
+	};
+	};
 
 
 	# Add local bin to path
