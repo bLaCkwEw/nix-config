@@ -25,7 +25,7 @@
 	# Try to make controller work consistently
 	hardware.steam-hardware.enable = true;
 	hardware.xpadneo.enable = true;
-	hardware.xone.enable = true;
+	# hardware.xone.enable = true;
 
 	# Latest Kernel
 	boot.kernelPackages = pkgs.linuxPackages_latest;
