@@ -31,6 +31,9 @@
 
   # Enable unfree packages
   nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.permittedInsecurePackages = [
+    "ventoy-1.1.05"
+  ];
 
   # Installed packages for local user
   home.packages = with pkgs; [
@@ -45,7 +48,7 @@
     scrcpy
     nodejs_20
     nodePackages_latest.pnpm
-    # ventoy-full # contains insecure binary blobs
+    ventoy-full # contains insecure binary blobs
     croc
     fzf
     bitwarden
