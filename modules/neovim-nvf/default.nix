@@ -96,6 +96,14 @@
         friendly-snippets.enable = true;
         mappings.next = "<C-n>";
         mappings.previous = "<C-p>";
+        setupOpts.sources = {
+          default = [
+            "lsp"
+            "path"
+            "snippets"
+            "buffer"
+          ];
+        };
       };
 
       vim.lsp = {
@@ -104,15 +112,17 @@
         lspkind.enable = true;
       };
 
-      vim.snippets.luasnip.enable = true;
-
       vim.languages = {
         enableTreesitter = true;
         enableFormat = true;
 
+        astro.enable = true;
+        bash.enable = true;
         html.enable = true;
         nix.enable = true;
-        astro.enable = true;
+        lua.enable = true;
+        markdown.enable = true;
+        svelte.enable = true;
         ts.enable = true;
       };
 

@@ -1,41 +1,40 @@
-{ config, pkgs, ... }:
-
 {
-	imports = [
-		./modules/alacritty.nix
-		./modules/fish.nix
-		./modules/git.nix
-		./modules/mpv.nix
-		./modules/bat.nix
-		./modules/eza.nix
-		./modules/zellij.nix
-		./modules/zoxide.nix
-		./modules/syncthing.nix
-		./modules/fastfetch.nix
-		#./modules/neovim/default.nix
-		./modules/neovim-nvf/default.nix
-		#./modules/dconf.nix
-		./modules/nh.nix
-	];
-	
-	
-	# User settings
+  config,
+  pkgs,
+  ...
+}: {
+  imports = [
+    ./modules/alacritty.nix
+    ./modules/fish.nix
+    ./modules/git.nix
+    ./modules/mpv.nix
+    ./modules/bat.nix
+    ./modules/eza.nix
+    ./modules/zellij.nix
+    ./modules/zoxide.nix
+    ./modules/syncthing.nix
+    #./modules/neovim/default.nix
+    ./modules/neovim-nvf/default.nix
+    #./modules/dconf.nix
+    ./modules/nh.nix
+  ];
+
+  # User settings
   home.username = "blackwew";
   home.homeDirectory = "/home/blackwew";
-  
+
   # Home manager version
   home.stateVersion = "24.05";
-  
+
   # Turn on home manager
   programs.home-manager.enable = true;
-  
+
   # Enable unfree packages
   nixpkgs.config.allowUnfree = true;
-  
-  
+
   # Installed packages for local user
   home.packages = with pkgs; [
-  	# Unfree
+    # Unfree
     vscode
     # obsidian
     discord
@@ -46,43 +45,40 @@
     scrcpy
     nodejs_20
     nodePackages_latest.pnpm
-		# ventoy-full # contains insecure binary blobs
+    # ventoy-full # contains insecure binary blobs
     croc
     fzf
     bitwarden
     bleachbit
     # ollama # broken
-		protonvpn-gui
-		antimicrox
-		turso-cli
-		# Music related
-		lrcget # get synced song lyrics + embed them into the music file
-		picard # song metadata
-	];
-  
+    protonvpn-gui
+    antimicrox
+    turso-cli
+    # Music related
+    lrcget # get synced song lyrics + embed them into the music file
+    picard # song metadata
+    microfetch
+  ];
 
   # Themeing
   gtk.enable = true;
   gtk.cursorTheme = {
-  	package = pkgs.bibata-cursors;
-  	name = "Bibata-Modern-Classic";
+    package = pkgs.bibata-cursors;
+    name = "Bibata-Modern-Classic";
   };
-  
-  
+
   # Config files (To remove once configs are migrated)
-	home.file = {
-  # Fish
-	".config/fish/conf.d" = {
-	  source = ./modules/fish/conf.d;
-	  recursive = true;
-	};
-	};
+  home.file = {
+    # Fish
+    ".config/fish/conf.d" = {
+      source = ./modules/fish/conf.d;
+      recursive = true;
+    };
+  };
 
+  # Add local bin to path
+  home.sessionPath = ["$HOME/.local/bin"];
 
-	# Add local bin to path
-	home.sessionPath = [ "$HOME/.local/bin" ];
-  
-  
   # Environment variables for local user
   home.sessionVariables = {
     EDITOR = "nvim";
@@ -90,9 +86,8 @@
     BROWSER = "firefox";
     TERMINAL = "alacritty";
     TERM = "alacritty";
-    
+
     # pnpm
     PNPM_HOME = "/home/blackwew/media/.pnpm-store/";
   };
 }
-
