@@ -1,147 +1,213 @@
-{
-  config,
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   # Neovim through NVF
   programs.nvf = {
     enable = true;
     settings = {
-      vim.viAlias = true;
-      vim.vimAlias = true;
+      vim = {
+        viAlias = true;
+        vimAlias = true;
 
-      # Theme
-      vim.theme = {
-        enable = true;
-        name = "catppuccin";
-        style = "mocha";
-        transparent = true;
-      };
-
-      # Clipboard
-      vim.clipboard = {
-        enable = true;
-        registers = "unnamedplus";
-        providers.wl-copy.enable = true;
-      };
-
-      # Options
-      vim.options.tabstop = 2;
-      vim.options.shiftwidth = 2;
-      vim.options.mouse = "a";
-      vim.hideSearchHighlight = true;
-      vim.options = {
-        ignorecase = true;
-        smartcase = true;
-      };
-
-      # Keybinds
-      vim.keymaps = [
-        # oil-nvim
-        {
-          key = "<leader>d";
-          mode = "n";
-          action = ":Oil --float<CR>";
-          silent = false;
-          desc = "Open parent directory with oil-nvim";
-        }
-        {
-          key = "<C-s>";
-          mode = "n";
-          action = ":w<CR>";
-          silent = true;
-          desc = "Save file with CTRL + S";
-        }
-        {
-          key = "<C-s>";
-          mode = ["i" "v"];
-          action = "<Esc>:w<CR>";
-          silent = true;
-          desc = "Save file with CTRL + S";
-        }
-        {
-          key = "<leader>t";
-          mode = "n";
-          action = ":terminal<CR>";
-          silent = true;
-          desc = "Open terminal";
-        }
-      ];
-
-      # Plugins
-      vim.visuals.nvim-web-devicons.enable = true;
-
-      vim.mini.pairs.enable = true;
-      vim.mini.statusline.enable = true;
-      vim.mini.comment.enable = true;
-      vim.mini.move.enable = true;
-
-      vim.utility.oil-nvim = {
-        enable = true;
-        setupOpts = {
-          delete_to_trash = true;
-          watch_for_chantes = true;
-          use_default_keymaps = false;
-          keymaps = {
-            "<CR>" = "actions.select";
-          };
-          view_options = {
-            show_hidden = true;
-          };
+        # Theme
+        theme = {
+          enable = true;
+          name = "catppuccin";
+          style = "mocha";
+          transparent = true;
         };
-      };
 
-      vim.autocomplete.blink-cmp = {
-        enable = true;
-        friendly-snippets.enable = true;
-        mappings.next = "<C-n>";
-        mappings.previous = "<C-p>";
-        setupOpts.sources = {
-          default = [
-            "lsp"
-            "path"
-            "snippets"
-            "buffer"
-          ];
+        # Clipboard
+        clipboard = {
+          enable = true;
+          registers = "unnamedplus";
+          providers.wl-copy.enable = true;
         };
-      };
 
-      vim.lsp = {
-        enable = true;
-        formatOnSave = true;
-        lspkind.enable = true;
-      };
+        # Options
+        options = {
+          tabstop = 2;
+          shiftwidth = 2;
+          mouse = "a";
+          ignorecase = true;
+          smartcase = true;
+        };
 
-      vim.languages = {
-        enableTreesitter = true;
-        enableFormat = true;
+        spellcheck = {
+          enable = true;
+          programmingWordlist.enable = true;
+        };
 
-        astro.enable = true;
-        bash.enable = true;
-        html.enable = true;
-        nix.enable = true;
-        lua.enable = true;
-        markdown.enable = true;
-        svelte.enable = true;
-        ts.enable = true;
-      };
+        # hideSearchHighlight = true;
 
-      vim.telescope = {
-        enable = true;
-        extensions = [
+        # Keybinds
+        keymaps = [
+          # oil-nvim
           {
-            name = "fzf";
-            packages = [pkgs.vimPlugins.telescope-fzf-native-nvim];
-            setup = {
-              fzf = {
-                fuzzy = true;
-                override_generic_sorter = true;
-                override_file_sorter = true;
-                case_mode = "smart_case";
+            key = "<leader>d";
+            mode = "n";
+            action = ":Oil --float<CR>";
+            silent = false;
+            desc = "Open parent directory with oil-nvim";
+          }
+          {
+            key = "<C-s>";
+            mode = "n";
+            action = ":w<CR>";
+            silent = true;
+            desc = "Save file with CTRL + S";
+          }
+          {
+            key = "<C-s>";
+            mode = ["i" "v"];
+            action = "<Esc>:w<CR>";
+            silent = true;
+            desc = "Save file with CTRL + S";
+          }
+          # {
+          #   key = "<leader>t";
+          #   mode = "n";
+          #   action = ":terminal<CR>";
+          #   silent = true;
+          #   desc = "Open terminal";
+          # }
+        ];
+
+        # Plugins
+        visuals = {
+          nvim-web-devicons.enable = true;
+          indent-blankline.enable = true;
+        };
+
+        ui = {
+          colorizer.enable = true;
+        };
+
+        binds = {
+          whichKey.enable = true;
+          cheatsheet.enable = true;
+          # hardtime-nvim.enable = true;
+        };
+
+        git = {
+          enable = true;
+        };
+
+        terminal = {
+          toggleterm = {
+            enable = true;
+            lazygit.enable = true;
+          };
+        };
+
+        tabline = {
+          nvimBufferline = {
+            enable = true;
+            mappings = {
+              cycleNext = "<leader>bn";
+              cyclePrevious = "<leader>bp";
+            };
+            setupOpts.options.separator_style = "slant";
+          };
+        };
+
+        mini = {
+          pairs.enable = true;
+          statusline.enable = true;
+          comment.enable = true;
+          move.enable = true;
+        };
+
+        notes.todo-comments.enable = true;
+
+        utility = {
+          oil-nvim = {
+            enable = true;
+            setupOpts = {
+              delete_to_trash = true;
+              watch_for_changes = true;
+              use_default_keymaps = false;
+              keymaps = {
+                "<CR>" = "actions.select";
+              };
+              view_options = {
+                show_hidden = true;
               };
             };
-          }
-        ];
+          };
+          motion = {
+            hop.enable = true;
+            leap.enable = true;
+            # precognition.enable = true;
+          };
+        };
+
+        autocomplete = {
+          blink-cmp = {
+            enable = true;
+            friendly-snippets.enable = true;
+            mappings = {
+              next = "<C-n>";
+              previous = "<C-p>";
+            };
+            # setupOpts = {
+            #   sources = {
+            #     default = [
+            #       "lsp"
+            #       "path"
+            #       "snippets"
+            #       "buffer"
+            #     ];
+            #   };
+            # };
+          };
+        };
+
+        snippets.luasnip.enable = true;
+
+        lsp = {
+          enable = true;
+          formatOnSave = true;
+          lspkind.enable = true;
+        };
+
+        treesitter = {
+          enable = true;
+          context.enable = true;
+          autotagHtml = true;
+        };
+
+        languages = {
+          enableTreesitter = true;
+          enableFormat = true;
+
+          astro.enable = true;
+          bash.enable = true;
+          css.enable = true;
+          html.enable = true;
+          nix.enable = true;
+          lua.enable = true;
+          markdown.enable = true;
+          svelte.enable = true;
+          tailwind.enable = true;
+          ts.enable = true;
+        };
+
+        telescope = {
+          enable = true;
+          extensions = [
+            {
+              name = "fzf";
+              packages = [pkgs.vimPlugins.telescope-fzf-native-nvim];
+              setup = {
+                fzf = {
+                  fuzzy = true;
+                  override_generic_sorter = true;
+                  override_file_sorter = true;
+                  case_mode = "smart_case";
+                };
+              };
+            }
+          ];
+        };
       };
     };
   };
