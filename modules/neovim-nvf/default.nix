@@ -105,7 +105,6 @@
               cycleNext = "<leader>bn";
               cyclePrevious = "<leader>bp";
             };
-            setupOpts.options.separator_style = "slant";
           };
         };
 
