@@ -36,8 +36,6 @@
           programmingWordlist.enable = true;
         };
 
-        # hideSearchHighlight = true;
-
         # Keybinds
         keymaps = [
           # oil-nvim
@@ -77,9 +75,15 @@
           indent-blankline.enable = true;
         };
 
+        hideSearchHighlight = true;
+
         ui = {
           colorizer.enable = true;
         };
+
+        diagnostics.config.underline = true;
+
+        diagnostics.nvim-lint.enable = true;
 
         binds = {
           whichKey.enable = true;
@@ -204,15 +208,14 @@
           enableFormat = true;
 
           # astro.enable = true;
-          # bash.enable = true;
-          # css.enable = true;
-          # html.enable = true;
-          # nix.enable = true;
-          # lua.enable = true;
-          # markdown.enable = true;
+          bash.enable = true;
+          css.enable = true;
+          html.enable = true;
+          nix.enable = true;
+          lua.enable = true;
+          markdown.enable = true;
           # svelte.enable = true;
-          # tailwind.enable = true;
-          # ts.enable = true;
+          ts.enable = true;
         };
 
         telescope = {
