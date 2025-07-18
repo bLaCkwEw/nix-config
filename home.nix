@@ -17,6 +17,7 @@
     ./modules/neovim-nvf/default.nix
     #./modules/dconf.nix
     ./modules/nh.nix
+    ./modules/ghostty.nix
   ];
 
   # User settings

@@ -1,0 +1,29 @@
+{ ... }:
+
+{
+  # Ghostty
+	programs.ghostty = {
+		enable = true;
+    settings = {
+      theme = "catppuccin-mocha";
+      background-opacity = 0.8;
+      window-decoration = "none";
+      # Font
+      font-size = 11;
+      font-family = "JetBrainsMono Nerd Font";
+      # Padding
+      window-padding-balance = true;
+      window-padding-x = 4;
+      window-padding-y = 4;
+      # Cursor
+      shell-integration-features = "no-cursor";
+      cursor-style = "block";
+      # Window
+      window-width = 80;
+      window-height = 18;
+      # Other
+      focus-follows-mouse = true;
+      clipboard-paste-protection = true;
+      };
+	};
+}
