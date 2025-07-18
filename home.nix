@@ -5,6 +5,7 @@
 }: {
   imports = [
     ./modules/alacritty.nix
+    ./modules/ghostty.nix
     ./modules/fish.nix
     ./modules/git.nix
     ./modules/mpv.nix
@@ -17,7 +18,6 @@
     ./modules/neovim-nvf/default.nix
     #./modules/dconf.nix
     ./modules/nh.nix
-    ./modules/ghostty.nix
   ];
 
   # User settings
@@ -88,8 +88,8 @@
     EDITOR = "nvim";
     VISUAL = "nvim";
     BROWSER = "firefox";
-    TERMINAL = "alacritty";
-    TERM = "alacritty";
+    TERMINAL = "ghostty";
+    TERM = "ghostty";
 
     # pnpm
     PNPM_HOME = "/home/blackwew/media/.pnpm-store/";

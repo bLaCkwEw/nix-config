@@ -31,11 +31,6 @@
           smartcase = true;
         };
 
-        spellcheck = {
-          enable = true;
-          programmingWordlist.enable = true;
-        };
-
         # Keybinds
         keymaps = [
           # oil-nvim
@@ -46,6 +41,7 @@
             silent = false;
             desc = "Open parent directory with oil-nvim";
           }
+          # Save buffer
           {
             key = "<C-s>";
             mode = "n";
@@ -60,13 +56,6 @@
             silent = true;
             desc = "Save file with CTRL + S";
           }
-          # {
-          #   key = "<leader>t";
-          #   mode = "n";
-          #   action = ":terminal<CR>";
-          #   silent = true;
-          #   desc = "Open terminal";
-          # }
         ];
 
         # Plugins
