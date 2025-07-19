@@ -18,6 +18,7 @@
     ./modules/neovim-nvf/default.nix
     #./modules/dconf.nix
     ./modules/nh.nix
+    ./modules/music.nix
   ];
 
   # User settings
