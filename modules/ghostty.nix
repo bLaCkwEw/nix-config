@@ -10,7 +10,10 @@
       window-decoration = "none";
       # Font
       font-size = 11;
-      font-family = "JetBrainsMono Nerd Font";
+      font-family = "JetBrainsMono Nerd Font Mono";
+      font-family-bold = "JetBrainsMono NFM Bold";
+      font-family-italic = "JetBrainsMono NFM Italic";
+      font-family-bold-italic = "JetBrainsMono NFM Bold Italic";
       # Padding
       window-padding-balance = true;
       window-padding-x = 4;
