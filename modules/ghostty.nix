@@ -21,12 +21,14 @@
       # Cursor
       shell-integration-features = "no-cursor";
       cursor-style = "block";
+      cursor-invert-fg-bg = true;
       # Window
       window-width = 80;
       window-height = 18;
       # Other
       focus-follows-mouse = true;
       clipboard-paste-protection = true;
+      unfocused-split-fill = "#222222";
       };
 	};
 }

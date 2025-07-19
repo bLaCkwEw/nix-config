@@ -80,9 +80,9 @@
           # hardtime-nvim.enable = true;
         };
 
-        git = {
-          enable = true;
-        };
+        # git = {
+        #   enable = true;
+        # };
 
         terminal = {
           toggleterm = {
@@ -140,16 +140,16 @@
               next = "<C-n>";
               previous = "<C-p>";
             };
-            # setupOpts = {
-            #   sources = {
-            #     default = [
-            #       "lsp"
-            #       "path"
-            #       "snippets"
-            #       "buffer"
-            #     ];
-            #   };
-            # };
+            setupOpts = {
+              sources = {
+                default = [
+                  "lsp"
+                  "path"
+                  "snippets"
+                  "buffer"
+                ];
+              };
+            };
           };
         };
 
