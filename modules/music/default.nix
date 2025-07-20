@@ -16,10 +16,12 @@
   # Music player
   programs.rmpc = {
     enable = true;
-    # config = ''
-    #   (
+  };
 
-    # )
-    # '';
+  home.file = {
+    ".config/rmpc" = {
+      source = ./rmpc;
+      recursive = true;
+    };
   };
 }
