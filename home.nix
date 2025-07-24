@@ -19,6 +19,7 @@
     #./modules/dconf.nix
     ./modules/nh.nix
     ./modules/music/default.nix
+    ./modules/distrobox.nix
   ];
 
   # User settings
