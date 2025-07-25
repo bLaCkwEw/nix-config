@@ -8,6 +8,7 @@
     ./modules/ghostty.nix
     ./modules/fish.nix
     ./modules/git.nix
+    ./modules/jujutsu.nix
     ./modules/mpv.nix
     ./modules/bat.nix
     ./modules/eza.nix
