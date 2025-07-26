@@ -43,7 +43,6 @@
   home.packages = with pkgs; [
     # Unfree
     vscode
-    # obsidian
     discord
     # Free
     mpv
@@ -57,7 +56,6 @@
     fzf
     bitwarden
     bleachbit
-    # ollama # broken
     protonvpn-gui
     antimicrox
     turso-cli
@@ -65,6 +63,7 @@
     lrcget # get synced song lyrics + embed them into the music file
     picard # song metadata
     microfetch
+    ffmpeg-full
   ];
 
   # Themeing
