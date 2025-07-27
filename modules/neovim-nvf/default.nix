@@ -41,6 +41,49 @@
             silent = false;
             desc = "Open parent directory with oil-nvim";
           }
+          # fzf-lua
+          {
+            key = "<leader>ff";
+            mode = "n";
+            action = ":FzfLua files<CR>";
+            silent = false;
+            desc = "Fuzzy find files";
+          }
+          {
+            key = "<leader>fo";
+            mode = "n";
+            action = ":FzfLua oldfiles<CR>";
+            silent = false;
+            desc = "Fuzzy find recently opened files";
+          }
+          {
+            key = "<leader>fb";
+            mode = "n";
+            action = ":FzfLua buffers<CR>";
+            silent = false;
+            desc = "Fuzzy find buffers";
+          }
+          {
+            key = "<leader>fgg";
+            mode = "n";
+            action = ":FzfLua grep<CR>";
+            silent = false;
+            desc = "Fuzzy find grepped word";
+          }
+          {
+            key = "<leader>fgl";
+            mode = "n";
+            action = ":FzfLua live_grep_native<CR>";
+            silent = false;
+            desc = "Fuzzy find grepped word live";
+          }
+          {
+            key = "<leader>fa";
+            mode = "n";
+            action = ":FzfLua<CR>";
+            silent = false;
+            desc = "Fuzzy find anything through fzf-lua";
+          }
           # Save buffer
           {
             key = "<C-s>";
@@ -56,6 +99,14 @@
             silent = true;
             desc = "Save file with CTRL + S";
           }
+          # Search highlight
+          {
+            key = "<Esc>";
+            mode = "n";
+            action = ":noh<return><Esc>";
+            silent = true;
+            desc = "Turn off highlight untill next search";
+          }
         ];
 
         # Plugins
@@ -63,8 +114,6 @@
           nvim-web-devicons.enable = true;
           indent-blankline.enable = true;
         };
-
-        hideSearchHighlight = true;
 
         ui = {
           colorizer.enable = true;
@@ -76,13 +125,7 @@
 
         binds = {
           whichKey.enable = true;
-          cheatsheet.enable = true;
-          # hardtime-nvim.enable = true;
         };
-
-        # git = {
-        #   enable = true;
-        # };
 
         terminal = {
           toggleterm = {
@@ -128,7 +171,6 @@
           motion = {
             hop.enable = true;
             leap.enable = true;
-            # precognition.enable = true;
           };
         };
 
@@ -140,41 +182,6 @@
               next = "<C-n>";
               previous = "<C-p>";
             };
-            setupOpts = {
-              sources = {
-                default = [
-                  "lsp"
-                  "path"
-                  "snippets"
-                  "buffer"
-                ];
-              };
-            };
-          };
-        };
-
-        extraPlugins = {
-          lazy-lsp-nvim = {
-            package = pkgs.vimPlugins.lazy-lsp-nvim;
-            setup = ''
-              require("lazy-lsp").setup {
-              	excluded_servers = {
-                  "ccls",                            -- prefer clangd
-                  "denols",                          -- prefer eslint and tsserver
-                  "docker_compose_language_service", -- yamlls should be enough?
-                  "flow",                            -- prefer eslint and tsserver
-                  "ltex",                            -- grammar tool using too much CPU
-                  "quick_lint_js",                   -- prefer eslint and tsserver
-                  "rnix",                            -- archived on Jan 25, 2024
-                  "scry",                            -- archived on Jun 1, 2023
-                  "tailwindcss",                     -- associates with too many filetypes
-                },
-                preferred_servers = {
-                  markdown = { "marksman" },
-                  python = { "pyright", "ruff_lsp" },
-                },
-              }
-            '';
           };
         };
 
@@ -193,36 +200,25 @@
         };
 
         languages = {
+          # Global settings
           enableTreesitter = true;
           enableFormat = true;
 
-          # astro.enable = true;
+          # Languages
+          astro.enable = true;
           bash.enable = true;
           css.enable = true;
           html.enable = true;
-          nix.enable = true;
           lua.enable = true;
           markdown.enable = true;
-          # svelte.enable = true;
+          nix.enable = true;
+          svelte.enable = true;
           ts.enable = true;
         };
 
-        telescope = {
+        fzf-lua = {
           enable = true;
-          extensions = [
-            {
-              name = "fzf";
-              packages = [pkgs.vimPlugins.telescope-fzf-native-nvim];
-              setup = {
-                fzf = {
-                  fuzzy = true;
-                  override_generic_sorter = true;
-                  override_file_sorter = true;
-                  case_mode = "smart_case";
-                };
-              };
-            }
-          ];
+          profile = "fzf-native";
         };
       };
     };
