@@ -44,6 +44,7 @@
     # Unfree
     vscode
     discord
+    lmstudio
     # Free
     mpv
     stremio
@@ -59,6 +60,7 @@
     protonvpn-gui
     antimicrox
     turso-cli
+    pods
     # Music related
     lrcget # get synced song lyrics + embed them into the music file
     picard # song metadata
