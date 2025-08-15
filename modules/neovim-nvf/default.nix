@@ -1,4 +1,9 @@
 {pkgs, ...}: {
+  # Dependencies
+  home.packages = with pkgs; [
+    fd # Required by fzf-lua
+  ];
+
   # Neovim through NVF
   programs.nvf = {
     enable = true;
