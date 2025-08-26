@@ -15,7 +15,6 @@
     ./modules/zellij.nix
     ./modules/zoxide.nix
     ./modules/syncthing.nix
-    #./modules/neovim/default.nix
     ./modules/neovim-nvf/default.nix
     #./modules/dconf.nix
     ./modules/nh.nix
@@ -42,9 +41,8 @@
   # Installed packages for local user
   home.packages = with pkgs; [
     # Unfree
-    vscode
+    # vscode # not used anymore, switched to neovim
     discord
-    lmstudio
     # Free
     mpv
     stremio
@@ -58,14 +56,13 @@
     bitwarden
     bleachbit
     protonvpn-gui
-    antimicrox
     turso-cli
     pods
+    microfetch
+    ffmpeg-full
     # Music related
     lrcget # get synced song lyrics + embed them into the music file
     picard # song metadata
-    microfetch
-    ffmpeg-full
   ];
 
   # Themeing
