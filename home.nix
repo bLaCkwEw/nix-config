@@ -45,7 +45,6 @@
     discord
     # Free
     mpv
-    stremio
     # transmission_4-gtk # broken
     scrcpy
     nodejs_20
