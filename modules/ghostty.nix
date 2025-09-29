@@ -1,11 +1,9 @@
-{ ... }:
-
-{
+{...}: {
   # Ghostty
-	programs.ghostty = {
-		enable = true;
+  programs.ghostty = {
+    enable = true;
     settings = {
-      theme = "catppuccin-mocha";
+      theme = "Catppuccin Mocha";
       background-opacity = 0.8;
       window-decoration = "none";
       # Font
@@ -29,6 +27,6 @@
       focus-follows-mouse = true;
       clipboard-paste-protection = true;
       unfocused-split-fill = "#222222";
-      };
-	};
+    };
+  };
 }
