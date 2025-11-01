@@ -52,7 +52,7 @@
     ventoy-full # contains insecure binary blobs
     croc
     fzf
-    bitwarden
+    bitwarden-desktop
     bleachbit
     protonvpn-gui
     turso-cli
