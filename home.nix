@@ -54,7 +54,7 @@
     fzf
     bitwarden-desktop
     bleachbit
-    protonvpn-gui
+    # protonvpn-gui # broken deps 2025-11-15
     turso-cli
     pods
     microfetch
