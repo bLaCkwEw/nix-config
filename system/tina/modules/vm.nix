@@ -1,12 +1,13 @@
-{ config, pkgs, ... }:
-
 {
-
+  config,
+  pkgs,
+  ...
+}: {
   # Enable dconf (System Management Tool)
   programs.dconf.enable = true;
 
   # Add user to libvirtd group
-  users.users.blackwew.extraGroups = [ "libvirtd" ];
+  users.users.blackwew.extraGroups = ["libvirtd"];
 
   # Install necessary packages
   environment.systemPackages = with pkgs; [
@@ -16,7 +17,7 @@
     spice-gtk
     spice-protocol
     win-spice
-    win-virtio
+    virtio-win
   ];
 
   # Manage the virtualisation services
@@ -25,12 +26,9 @@
       enable = true;
       qemu = {
         swtpm.enable = true;
-        ovmf.enable = true;
-        ovmf.packages = [ pkgs.OVMFFull.fd ];
       };
     };
     spiceUSBRedirection.enable = true;
   };
   services.spice-vdagentd.enable = true;
-
 }
