@@ -210,7 +210,7 @@
           enableFormat = true;
 
           # Languages
-          astro.enable = true;
+          # astro.enable = true;
           bash.enable = true;
           css.enable = true;
           html.enable = true;
