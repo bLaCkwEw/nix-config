@@ -33,6 +33,14 @@
   hardware.xpadneo.enable = true;
   # hardware.xone.enable = true;
 
+  # Swap file
+  swapDevices = [
+    {
+      device = "/var/lib/swapfile";
+      size = 16 * 1024;
+    }
+  ];
+
   # Latest Kernel
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
