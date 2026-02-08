@@ -47,7 +47,7 @@
     mpv
     # transmission_4-gtk # broken
     scrcpy
-    nodejs_20
+    nodejs_25
     nodePackages_latest.pnpm
     ventoy-full # contains insecure binary blobs
     croc

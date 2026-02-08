@@ -133,6 +133,11 @@
   # Enable tailscale
   # services.tailscale.enable = true;
 
+  # Enable support for dynamically linked binaries
+  programs.nix-ld = {
+    enable = true;
+  };
+
   # Define a user account !! Don't forget to set a password with "passwd"!!
   users.users.blackwew = {
     isNormalUser = true;
