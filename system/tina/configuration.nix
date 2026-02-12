@@ -10,6 +10,8 @@
     # ./modules/vm.nix
 
     ./modules/remove-gnome-bloat.nix
+
+    ./modules/nvidia.nix
   ];
 
   # Bootloader
