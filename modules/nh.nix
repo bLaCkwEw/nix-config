@@ -1,8 +1,10 @@
-{ ... }:
-
-{
+{...}: {
   # nh
-	programs.nh = {
-		enable = true;
-	};
+  programs.nh = {
+    enable = true;
+    clean = {
+      enable = true;
+      dates = "monthly";
+    };
+  };
 }

@@ -4,15 +4,14 @@
   ...
 }: {
   imports = [
-    ./modules/alacritty.nix
+    # ./modules/alacritty.nix
     ./modules/ghostty.nix
     ./modules/fish.nix
     ./modules/git.nix
-    ./modules/jujutsu.nix
     ./modules/mpv.nix
     ./modules/bat.nix
     ./modules/eza.nix
-    ./modules/zellij.nix
+    # ./modules/zellij.nix
     ./modules/zoxide.nix
     ./modules/syncthing.nix
     ./modules/neovim-nvf/default.nix

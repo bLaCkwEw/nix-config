@@ -35,7 +35,13 @@
   hardware.xpadneo.enable = true;
   # hardware.xone.enable = true;
 
-  # Swap file
+  # Swap & ZRAM
+  zramSwap = {
+    enable = true;
+    priority = 100;
+    algorithm = "lz4";
+    memoryPercent = 50;
+  };
   swapDevices = [
     {
       device = "/var/lib/swapfile";
