@@ -50,7 +50,9 @@
   ];
 
   # Latest Kernel
-  boot.kernelPackages = pkgs.linuxPackages_latest;
+  # boot.kernelPackages = pkgs.linuxPackages_latest;
+  # Pinning to 6.18 temporarily so I can build the NVIDIA drivers
+  boot.kernelPackages = pkgs.linuxKernel.packages.linux_6_18;
 
   # Enable BBR congestion control
   boot = {
