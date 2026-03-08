@@ -40,7 +40,6 @@
   # Installed packages for local user
   home.packages = with pkgs; [
     # Unfree
-    # vscode # not used anymore, switched to neovim
     discord
     # Free
     mpv
@@ -61,6 +60,9 @@
     # Music related
     lrcget # get synced song lyrics + embed them into the music file
     picard # song metadata
+
+    # LLM stuff to try out vibecoding
+    opencode
   ];
 
   # Themeing
