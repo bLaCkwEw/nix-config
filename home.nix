@@ -66,10 +66,13 @@
   ];
 
   # Themeing
-  gtk.enable = true;
-  gtk.cursorTheme = {
-    package = pkgs.bibata-cursors;
-    name = "Bibata-Modern-Classic";
+  gtk = {
+    enable = true;
+    cursorTheme = {
+      package = pkgs.bibata-cursors;
+      name = "Bibata-Modern-Classic";
+    };
+    gtk4.theme = config.gtk.theme;
   };
 
   # Config files (To remove once configs are migrated)

@@ -20,6 +20,7 @@
           email = "35146970+bLaCkwEw@users.noreply.github.com";
         };
       };
+      signing.format = null;
     };
 
     # Lazy Git
