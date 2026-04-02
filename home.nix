@@ -18,7 +18,7 @@
     #./modules/dconf.nix
     ./modules/nh.nix
     ./modules/music/default.nix
-    ./modules/distrobox.nix
+    # ./modules/distrobox.nix
   ];
 
   # User settings
@@ -41,12 +41,12 @@
   home.packages = with pkgs; [
     # Unfree
     discord
-    # Free
+
     mpv
     # transmission_4-gtk # broken
     scrcpy
     nodejs_25
-    nodePackages_latest.pnpm
+    pnpm
     ventoy-full # contains insecure binary blobs
     croc
     fzf
@@ -61,8 +61,9 @@
     lrcget # get synced song lyrics + embed them into the music file
     picard # song metadata
 
-    # LLM stuff to try out vibecoding
+    # AI
     opencode
+    ollama
   ];
 
   # Themeing

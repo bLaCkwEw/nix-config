@@ -8,10 +8,9 @@
     ./hardware-configuration.nix
 
     # ./modules/vm.nix
-
     ./modules/remove-gnome-bloat.nix
-
     ./modules/nvidia.nix
+    ./modules/docker.nix
   ];
 
   # Bootloader
@@ -50,9 +49,7 @@
   ];
 
   # Latest Kernel
-  # boot.kernelPackages = pkgs.linuxPackages_latest;
-  # Pinning to 6.18 temporarily so I can build the NVIDIA drivers
-  boot.kernelPackages = pkgs.linuxKernel.packages.linux_6_18;
+  boot.kernelPackages = pkgs.linuxPackages_latest;
 
   # Enable BBR congestion control
   boot = {
@@ -164,7 +161,7 @@
   environment.systemPackages = with pkgs; [
     firefox
     alacritty
-    fastfetch
+    microfetch
     htop
     git
   ];
