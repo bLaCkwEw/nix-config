@@ -54,7 +54,6 @@
     bleachbit
     # protonvpn-gui # broken deps 2025-11-15
     turso-cli
-    pods
     microfetch
     ffmpeg-full
     # Music related

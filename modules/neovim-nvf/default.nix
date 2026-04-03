@@ -36,6 +36,8 @@
           smartcase = true;
         };
 
+        lineNumberMode = "number";
+
         # Keybinds
         keymaps = [
           # oil-nvim
@@ -124,9 +126,11 @@
           colorizer.enable = true;
         };
 
-        diagnostics.config.underline = true;
-
-        diagnostics.nvim-lint.enable = true;
+        diagnostics = {
+          enable = true;
+          config.underline = true;
+          nvim-lint.enable = true;
+        };
 
         binds = {
           whichKey.enable = true;
@@ -149,10 +153,16 @@
           };
         };
 
+        autopairs = {
+          nvim-autopairs.enable = true;
+        };
+
+        comments = {
+          comment-nvim.enable = true;
+        };
+
         mini = {
-          pairs.enable = true;
           statusline.enable = true;
-          comment.enable = true;
           move.enable = true;
         };
 
@@ -196,6 +206,26 @@
           enable = true;
           formatOnSave = true;
           lspkind.enable = true;
+
+          servers = {
+            nixd = {
+              enable = true;
+              settings = {
+                nixpkgs = {
+                  expr = "import <nixpkgs> { }";
+                };
+                formatting = {
+                  command = ["alejandra"];
+                };
+                nixos = {
+                  expr = "(builtins.getFlake \"/home/blackwew/.config/home-manager/system/tina\").nixosConfigurations.tina.options";
+                };
+                home-manager = {
+                  expr = "(builtins.getFlake \"/home/blackwew/.config/home-manager\").homeConfigurations.\"blackwew\".options";
+                };
+              };
+            };
+          };
         };
 
         treesitter = {
@@ -216,7 +246,17 @@
           html.enable = true;
           lua.enable = true;
           markdown.enable = true;
-          nix.enable = true;
+          nix = {
+            enable = true;
+            lsp = {
+              enable = true;
+              servers = ["nixd"];
+            };
+            format = {
+              enable = true;
+              type = ["alejandra"];
+            };
+          };
           svelte.enable = true;
           ts.enable = true;
         };

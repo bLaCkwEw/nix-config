@@ -15,7 +15,7 @@
     # Media keys & notification support for MPD
     mpdris2 = {
       enable = true;
-      notifications = true;
+      notifications = false;
       multimediaKeys = true;
     };
   };
