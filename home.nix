@@ -82,6 +82,10 @@
       source = ./modules/fish/conf.d;
       recursive = true;
     };
+    ".config/fish/functions" = {
+      source = ./modules/fish/functions;
+      recursive = true;
+    };
   };
 
   # Add local bin to path
