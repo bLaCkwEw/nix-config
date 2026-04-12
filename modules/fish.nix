@@ -15,17 +15,18 @@
       gaa = "git add .";
       gpu = "git pull";
       gps = "git push";
-    };
 
-    shellAliases = {
       # Various
+      rm = "rm -drvI";
+      h = "history --max=10";
       c = "clear";
       e = "exit";
       q = "exit";
-      h = "history --max=10";
-      rm = "rm -drvI";
-      cat = "bat";
       pnpr = "pnpm run";
+      cat = "bat";
+    };
+
+    shellAliases = {
       # Git
       gcd = "git commit -v -m \"$(date +'%Y-%m-%d %H:%M')\"";
     };

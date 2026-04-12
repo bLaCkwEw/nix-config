@@ -160,7 +160,7 @@
   # Installed packages:
   environment.systemPackages = with pkgs; [
     firefox
-    alacritty
+    ghostty
     microfetch
     htop
     git
