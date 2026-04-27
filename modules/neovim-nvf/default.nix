@@ -258,7 +258,7 @@
             };
           };
           svelte.enable = true;
-          ts.enable = true;
+          typescript.enable = true;
         };
 
         fzf-lua = {
