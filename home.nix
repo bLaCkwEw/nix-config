@@ -2,9 +2,9 @@
   config,
   pkgs,
   ...
-}: {
+}:
+{
   imports = [
-    # ./modules/alacritty.nix
     ./modules/ghostty.nix
     ./modules/fish.nix
     ./modules/git.nix
@@ -14,11 +14,10 @@
     # ./modules/zellij.nix
     ./modules/zoxide.nix
     ./modules/syncthing.nix
-    ./modules/neovim-nvf/default.nix
+    ./modules/neovim
     #./modules/dconf.nix
     ./modules/nh.nix
     ./modules/music/default.nix
-    # ./modules/distrobox.nix
   ];
 
   # User settings
@@ -89,12 +88,12 @@
   };
 
   # Add local bin to path
-  home.sessionPath = ["$HOME/.local/bin"];
+  home.sessionPath = [ "$HOME/.local/bin" ];
 
   # Environment variables for local user
   home.sessionVariables = {
-    EDITOR = "nvim";
-    VISUAL = "nvim";
+    # EDITOR = "nvim";
+    # VISUAL = "nvim";
     BROWSER = "firefox";
     TERMINAL = "ghostty";
     TERM = "ghostty";

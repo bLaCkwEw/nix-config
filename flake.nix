@@ -7,17 +7,12 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nvf = {
-      url = "github:notashelf/nvf";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs = {
     self,
     nixpkgs,
     home-manager,
-    nvf,
     ...
   }: let
     system = "x86_64-linux";
@@ -32,7 +27,6 @@
       inherit pkgs;
 
       modules = [
-        nvf.homeManagerModules.default
         ./home.nix
       ];
     };
