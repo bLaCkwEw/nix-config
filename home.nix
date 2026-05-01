@@ -34,7 +34,7 @@
   # Enable unfree packages
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.permittedInsecurePackages = [
-    "ventoy-1.1.10"
+    "ventoy-1.1.12"
   ];
 
   # Installed packages for local user
@@ -53,7 +53,7 @@
     bitwarden-desktop
     bleachbit
     # protonvpn-gui # broken deps 2025-11-15
-    turso-cli
+    # turso-cli
     microfetch
     ffmpeg-full
     # Music related
