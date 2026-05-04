@@ -14,6 +14,6 @@ vim.keymap.set("v", "<C-s>", "<Esc><cmd>w<CR>", { desc = "Save file with CTRL + 
 vim.keymap.set("n", "<Esc>", "<cmd>noh<return><Esc>", { desc = "Turn off highlight until next search", silent = true })
 
 -- fff
-vim.keymap.set('n', 'ff', function() require('fff').find_files() end, { desc = 'FFFind files' })
-vim.keymap.set('n', 'fg', function() require('fff').live_grep() end, { desc = 'FFFind files' })
+vim.keymap.set('n', '<leader>ff', function() require('fff').find_files() end, { desc = 'FFFind files' })
+vim.keymap.set('n', '<leader>fg', function() require('fff').live_grep() end, { desc = 'FFFind files' })
 
