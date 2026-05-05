@@ -12,7 +12,7 @@ Clone the repository into `~/.config/home-manager/`.
 
 To build and activate Home Manager:
 ```bash
-nh home switch .
+nh home switch . --ask
 ```
 
 
@@ -20,6 +20,13 @@ nh home switch .
 
 To build and activate NixOS (system):
 ```bash
-sudo nh os switch .#tina
+sudo nh os switch .#tina --ask
 ```
 
+
+### Both!
+
+To build & switch both, one after the other, run the following:
+```bash
+nh os switch .#tina --ask && nh home switch . --ask
+```
