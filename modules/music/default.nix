@@ -1,4 +1,5 @@
-{...}: {
+{ ... }:
+{
   services = {
     # Music daemon
     mpd = {
@@ -17,6 +18,16 @@
       enable = true;
       notifications = false;
       multimediaKeys = true;
+    };
+
+    # ListenBrainz
+    listenbrainz-mpd = {
+      enable = true;
+      settings = {
+        submission = {
+          token_file = "/home/blackwew/.listenbrainz_token";
+        };
+      };
     };
   };
   # Music player

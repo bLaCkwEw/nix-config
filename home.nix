@@ -60,7 +60,7 @@
     picard # song metadata
 
     # AI
-    opencode
+    # opencode # managed through pnpm now
     ollama
   ];
 
@@ -88,7 +88,10 @@
   };
 
   # Add local bin to path
-  home.sessionPath = [ "$HOME/.local/bin" ];
+  home.sessionPath = [
+    "$HOME/.local/bin"
+    "$HOME/media/.pnpm-store"
+  ];
 
   # Environment variables for local user
   home.sessionVariables = {
