@@ -1,9 +1,9 @@
 [/]
-custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/']
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom5/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom6/']
 
 [custom-keybindings/custom0]
 binding='<Super>Return'
-command='alacritty'
+command='ghostty'
 name='Launch Terminal'
 
 [custom-keybindings/custom1]
@@ -20,3 +20,18 @@ name='Launch Files'
 binding='<Alt><Super>f'
 command='firefox -P Work'
 name='Launch Firefox (Work)'
+
+[custom-keybindings/custom4]
+binding='<Shift><Super>p'
+command='rmpc togglepause'
+name='RMPC Toggle Pause'
+
+[custom-keybindings/custom5]
+binding='<Shift><Super>period'
+command='rmpc next'
+name='RMPC Next'
+
+[custom-keybindings/custom6]
+binding='<Shift><Super>comma'
+command='rmpc prev'
+name='RMPC Prev'

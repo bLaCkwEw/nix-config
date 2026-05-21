@@ -15,7 +15,7 @@
     ./modules/zoxide.nix
     ./modules/syncthing.nix
     ./modules/neovim
-    #./modules/dconf.nix
+    ./modules/dconf
     ./modules/nh.nix
     ./modules/music/default.nix
   ];
@@ -42,7 +42,6 @@
     discord
 
     mpv
-    # transmission_4-gtk # broken
     scrcpy
     nodejs_25
     pnpm
@@ -51,17 +50,13 @@
     fzf
     bitwarden-desktop
     bleachbit
-    # protonvpn-gui # broken deps 2025-11-15
-    # turso-cli
+    mission-center
     microfetch
     ffmpeg-full
+
     # Music related
     lrcget # get synced song lyrics + embed them into the music file
     picard # song metadata
-
-    # AI
-    # opencode # managed through pnpm now
-    ollama
   ];
 
   # Themeing
@@ -90,7 +85,7 @@
   # Add local bin to path
   home.sessionPath = [
     "$HOME/.local/bin"
-    "$HOME/media/.pnpm-store"
+    "$HOME/media/.pnpm-store/bin/"
   ];
 
   # Environment variables for local user
