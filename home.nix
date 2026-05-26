@@ -43,7 +43,7 @@
 
     mpv
     scrcpy
-    nodejs_25
+    nodejs_26
     pnpm
     ventoy-full # contains insecure binary blobs
     croc
