@@ -3,7 +3,8 @@
   pkgs,
   lib,
   ...
-}: {
+}:
+{
   imports = [
     ./hardware-configuration.nix
 
@@ -17,7 +18,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.grub = {
     enable = true;
-    devices = ["nodev"];
+    devices = [ "nodev" ];
     efiSupport = true;
     useOSProber = true;
     configurationLimit = 30;
@@ -53,7 +54,7 @@
 
   # Enable BBR congestion control
   boot = {
-    kernelModules = ["tcp_bbr"];
+    kernelModules = [ "tcp_bbr" ];
     kernel.sysctl = {
       "net.ipv4.tcp_congestion_control" = "bbr";
       "net.core.default_qdisc" = "fq";
@@ -67,7 +68,10 @@
 
   # Nix Settings
   nix.settings = {
-    experimental-features = ["nix-command" "flakes"];
+    experimental-features = [
+      "nix-command"
+      "flakes"
+    ];
     auto-optimise-store = true;
   };
 
@@ -120,7 +124,7 @@
   # services.xserver.libinput.enable = true;
 
   # Enable NTFS Support
-  boot.supportedFilesystems = ["ntfs"];
+  boot.supportedFilesystems = [ "ntfs" ];
 
   # Enable fish shell
   programs.fish.enable = true;
@@ -149,8 +153,13 @@
   users.users.blackwew = {
     isNormalUser = true;
     description = "blackwew";
-    extraGroups = ["networkmanager" "wheel" "audio" "input"];
-    packages = with pkgs; [];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+      "audio"
+      "input"
+    ];
+    packages = with pkgs; [ ];
     shell = pkgs.fish;
   };
 
@@ -161,7 +170,6 @@
   environment.systemPackages = with pkgs; [
     firefox
     ghostty
-    microfetch
     htop
     git
   ];

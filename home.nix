@@ -51,7 +51,6 @@
     bitwarden-desktop
     bleachbit
     mission-center
-    microfetch
     ffmpeg-full
 
     # Music related
