@@ -34,6 +34,7 @@
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.permittedInsecurePackages = [
     "ventoy-1.1.12"
+    "electron-39.8.10"
   ];
 
   # Installed packages for local user
@@ -52,6 +53,7 @@
     bleachbit
     mission-center
     ffmpeg-full
+    calibre
 
     # Music related
     lrcget # get synced song lyrics + embed them into the music file
