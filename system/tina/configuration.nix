@@ -150,17 +150,26 @@
   };
 
   # Define a user account !! Don't forget to set a password with "passwd"!!
-  users.users.blackwew = {
-    isNormalUser = true;
-    description = "blackwew";
-    extraGroups = [
-      "networkmanager"
-      "wheel"
-      "audio"
-      "input"
-    ];
-    packages = with pkgs; [ ];
-    shell = pkgs.fish;
+  users.users = {
+    blackwew = {
+      isNormalUser = true;
+      description = "Main user account.";
+      extraGroups = [
+        "networkmanager"
+        "wheel"
+        "audio"
+        "input"
+      ];
+      # packages = with pkgs; [ ];
+      shell = pkgs.fish;
+    };
+    gabriel = {
+      isNormalUser = true;
+      description = "Clean slate. Used for recording videos.";
+      extraGroups = [ "wheel" ];
+      # packages = with pkgs; [ ];
+      shell = pkgs.fish;
+    };
   };
 
   # Allow unfree packages

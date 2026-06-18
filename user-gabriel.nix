@@ -11,9 +11,7 @@
     ./modules/mpv.nix
     ./modules/bat.nix
     ./modules/eza.nix
-    # ./modules/zellij.nix
     ./modules/zoxide.nix
-    ./modules/syncthing.nix
     ./modules/neovim
     ./modules/dconf
     ./modules/nh.nix
@@ -21,8 +19,8 @@
   ];
 
   # User settings
-  home.username = "blackwew";
-  home.homeDirectory = "/home/blackwew";
+  home.username = "gabriel";
+  home.homeDirectory = "/home/gabriel";
 
   # Home manager version
   home.stateVersion = "24.05";
@@ -33,33 +31,16 @@
   # Enable unfree packages
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.permittedInsecurePackages = [
-    "ventoy-1.1.12"
-    "electron-39.8.10"
   ];
 
   # Installed packages for local user
   home.packages = with pkgs; [
     # Unfree
-    discord
+    # -
 
-    mpv
-    scrcpy
-    nodejs_26
+    # Free
     pnpm
-    ventoy-full # contains insecure binary blobs
-    croc
-    fzf
-    bitwarden-desktop
-    bleachbit
-    mission-center
-    ffmpeg-full
-    calibre
-
     blender
-
-    # Music related
-    lrcget # get synced song lyrics + embed them into the music file
-    picard # song metadata
   ];
 
   # Themeing
@@ -100,6 +81,6 @@
     TERM = "ghostty";
 
     # pnpm
-    PNPM_HOME = "/home/blackwew/media/.pnpm-store/";
+    PNPM_HOME = "/home/gabriel/media/.pnpm-store/";
   };
 }

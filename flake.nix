@@ -9,33 +9,44 @@
     };
   };
 
-  outputs = {
-    self,
-    nixpkgs,
-    home-manager,
-    ...
-  }: let
-    system = "x86_64-linux";
-    pkgs = import nixpkgs {
-      inherit system;
-      config = {
-        allowUnfree = true;
+  outputs =
+    {
+      self,
+      nixpkgs,
+      home-manager,
+      ...
+    }:
+    let
+      system = "x86_64-linux";
+      pkgs = import nixpkgs {
+        inherit system;
+        config = {
+          allowUnfree = true;
+        };
+      };
+    in
+    {
+      homeConfigurations."blackwew" = home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
+
+        modules = [
+          ./home.nix
+        ];
+      };
+
+      homeConfigurations."gabriel" = home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
+
+        modules = [
+          ./user-gabriel.nix
+        ];
+      };
+
+      nixosConfigurations.tina = nixpkgs.lib.nixosSystem {
+        inherit system;
+        modules = [
+          ./system/tina/configuration.nix
+        ];
       };
     };
-  in {
-    homeConfigurations."blackwew" = home-manager.lib.homeManagerConfiguration {
-      inherit pkgs;
-
-      modules = [
-        ./home.nix
-      ];
-    };
-
-    nixosConfigurations.tina = nixpkgs.lib.nixosSystem {
-      inherit system;
-      modules = [
-        ./system/tina/configuration.nix
-      ];
-    };
-  };
 }
