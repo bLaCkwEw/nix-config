@@ -153,7 +153,7 @@
   users.users = {
     blackwew = {
       isNormalUser = true;
-      description = "Main user account.";
+      description = "blackwew";
       extraGroups = [
         "networkmanager"
         "wheel"
@@ -165,7 +165,7 @@
     };
     gabriel = {
       isNormalUser = true;
-      description = "Clean slate. Used for recording videos.";
+      description = "gabriel";
       extraGroups = [ "wheel" ];
       # packages = with pkgs; [ ];
       shell = pkgs.fish;
