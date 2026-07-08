@@ -47,7 +47,7 @@
     nodejs_26
     pnpm
     ventoy-full # contains insecure binary blobs
-    croc
+    # croc
     fzf
     bitwarden-desktop
     bleachbit

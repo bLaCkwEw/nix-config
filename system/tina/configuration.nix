@@ -12,6 +12,7 @@
     ./modules/remove-gnome-bloat.nix
     ./modules/nvidia.nix
     ./modules/docker.nix
+    ./modules/nuphy.nix
   ];
 
   # Bootloader
