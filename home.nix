@@ -95,7 +95,7 @@
   home.sessionVariables = {
     # EDITOR = "nvim";
     # VISUAL = "nvim";
-    BROWSER = "firefox";
+    BROWSER = "app.zen_browser.zen";
     TERMINAL = "ghostty";
     TERM = "ghostty";
 

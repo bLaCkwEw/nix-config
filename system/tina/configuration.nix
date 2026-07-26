@@ -63,8 +63,11 @@
   };
 
   # Network
-  networking.networkmanager.enable = true;
-  networking.hostName = "tina";
+  networking = {
+    networkmanager.enable = true;
+    hostName = "tina";
+  };
+  systemd.services.NetworkManager-wait-online.enable = false;
   # networking.wireless.enable = true;
 
   # Nix Settings

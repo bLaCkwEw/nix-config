@@ -18,7 +18,7 @@ with lib.hm.gvariant;
     "org/gnome/shell/keybindings" = {
       screenshot = [ "Print" ];
       show-screenshot-ui = [ "<Shift><Super>s" ];
-      toggle-message-tray = [ "<Control><Alt>v" ];
+      # toggle-message-tray = [ "<Control><Alt>v" ];
     };
 
     "org/gnome/desktop/wm/keybindings" = {
@@ -55,8 +55,8 @@ with lib.hm.gvariant;
 
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1" = {
       binding = "<Super>f";
-      command = "firefox";
-      name = "Launch Firefox";
+      command = "app.zen_browser.zen";
+      name = "Launch Zen Browser";
     };
 
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2" = {
