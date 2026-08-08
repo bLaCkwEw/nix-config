@@ -1,10 +1,10 @@
-{...}: {
+{ ... }: {
   # Ghostty
   programs.ghostty = {
     enable = true;
     settings = {
       theme = "Catppuccin Mocha";
-      background-opacity = 0.9;
+      background-opacity = 0.95;
       window-decoration = "none";
       # Font
       font-size = 11;
