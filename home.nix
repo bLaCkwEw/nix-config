@@ -16,6 +16,7 @@
     ./modules/syncthing.nix
     ./modules/neovim
     ./modules/dconf
+    ./modules/cursors.nix
     ./modules/nh.nix
     ./modules/music/default.nix
     ./modules/hunk.nix
@@ -66,10 +67,6 @@
   # Themeing
   gtk = {
     enable = true;
-    cursorTheme = {
-      package = pkgs.bibata-cursors;
-      name = "Bibata-Modern-Classic";
-    };
     gtk4.theme = config.gtk.theme;
   };
 
