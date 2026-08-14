@@ -19,7 +19,6 @@
     ./modules/cursors.nix
     ./modules/nh.nix
     ./modules/music/default.nix
-    ./modules/hunk.nix
   ];
 
   # User settings

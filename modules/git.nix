@@ -1,6 +1,6 @@
-{...}: {
-  # Git
+{ ... }: {
   programs = {
+    # Git
     git = {
       enable = true;
 
@@ -26,6 +26,20 @@
     # Lazy Git
     lazygit = {
       enable = true;
+      enableFishIntegration = true;
+    };
+
+    # Hunk Diff
+    hunk = {
+      enable = true;
+      enableGitIntegration = true;
+      settings = {
+        theme = "catppuccin-mocha";
+        mode = "auto";
+        line_numbers = true;
+        tab_width = 4;
+        menu_bar = false;
+      };
     };
   };
 }
