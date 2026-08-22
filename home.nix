@@ -34,7 +34,7 @@
   # Enable unfree packages
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.permittedInsecurePackages = [
-    "ventoy-1.1.12"
+    "ventoy-1.1.17"
     "electron-39.8.10"
   ];
 
