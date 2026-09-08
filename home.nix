@@ -6,7 +6,7 @@
 {
   imports = [
     ./modules/ghostty.nix
-    ./modules/fish.nix
+    ./modules/fish
     ./modules/git.nix
     ./modules/mpv.nix
     ./modules/bat.nix
@@ -18,7 +18,8 @@
     ./modules/dconf
     ./modules/cursors.nix
     ./modules/nh.nix
-    ./modules/music/default.nix
+    ./modules/music
+    ./modules/agent-stuff
   ];
 
   # User settings
@@ -67,19 +68,6 @@
   gtk = {
     enable = true;
     gtk4.theme = config.gtk.theme;
-  };
-
-  # Config files (To remove once configs are migrated)
-  home.file = {
-    # Fish
-    ".config/fish/conf.d" = {
-      source = ./modules/fish/conf.d;
-      recursive = true;
-    };
-    ".config/fish/functions" = {
-      source = ./modules/fish/functions;
-      recursive = true;
-    };
   };
 
   # Add local bin to path

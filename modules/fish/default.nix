@@ -31,4 +31,15 @@
       gcd = "git commit -v -m \"$(date +'%Y-%m-%d %H:%M')\"";
     };
   };
+
+  home.file = {
+    ".config/fish/conf.d" = {
+      source = ./conf.d;
+      recursive = true;
+    };
+    ".config/fish/functions" = {
+      source = ./functions;
+      recursive = true;
+    };
+  };
 }
