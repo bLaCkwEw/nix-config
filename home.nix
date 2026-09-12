@@ -62,9 +62,6 @@
     # Music related
     lrcget # get synced song lyrics + embed them into the music file
     picard # song metadata
-
-    # AI
-    codex
   ];
 
   # Themeing
