@@ -20,6 +20,7 @@
     ./modules/nh.nix
     ./modules/music
     ./modules/agent-stuff
+    ./modules/vicinae.nix
   ];
 
   # User settings

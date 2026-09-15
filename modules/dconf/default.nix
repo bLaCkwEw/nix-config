@@ -1,10 +1,11 @@
-{ lib, ... }:
-
-with lib.hm.gvariant;
+{ ... }:
 {
   dconf.settings = {
     "org/gnome/settings-daemon/plugins/media-keys" = {
       custom-keybindings = [
+        #
+        # MUST add custom keybindings here before they are properly applied in dconf
+        #
         "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"
         "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/"
         "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/"
@@ -12,6 +13,9 @@ with lib.hm.gvariant;
         "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4/"
         "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom5/"
         "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom6/"
+        "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom7/"
+        "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom8/"
+        "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom9/"
       ];
     };
 
@@ -71,6 +75,8 @@ with lib.hm.gvariant;
       name = "Launch Firefox (Work)";
     };
 
+    # RMPC
+
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4" = {
       binding = "<Shift><Super>p";
       command = "rmpc togglepause";
@@ -88,5 +94,27 @@ with lib.hm.gvariant;
       command = "rmpc prev";
       name = "RMPC Prev";
     };
+
+    # Vicinae
+    # Doesn't currently work!!!!!!!!!!!!!!!!!!!!!!!!!
+
+    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom7" = {
+      binding = "<Control>space";
+      command = "vicinae toggle";
+      name = "Vicinae";
+    };
+
+    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom8" = {
+      binding = "<Super>v";
+      command = "vicinae deeplink vicinae://launch/clipboard/history";
+      name = "Vicinae Clipboard";
+    };
+
+    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom9" = {
+      binding = "<Super>Delete";
+      command = "vicinae deeplink vicinae://launch/clipboard/clear-history";
+      name = "Vicinae Clipboard Delete";
+    };
+
   };
 }
