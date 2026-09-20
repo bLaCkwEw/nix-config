@@ -16,8 +16,12 @@
     # Media keys & notification support for MPD
     mpdris2 = {
       enable = true;
-      notifications = false;
-      multimediaKeys = true;
+      settings = {
+        Bling = {
+          mmkey = true;
+          notify = false;
+        };
+      };
     };
 
     # ListenBrainz
